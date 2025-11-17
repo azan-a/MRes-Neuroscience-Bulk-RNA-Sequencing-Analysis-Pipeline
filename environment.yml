@@ -1,0 +1,11 @@
+name: rna_seq_analysis
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Command-Line Tools (Latest available version will be installed)
+  - fastqc
+  - trimmomatic
+  - multiqc

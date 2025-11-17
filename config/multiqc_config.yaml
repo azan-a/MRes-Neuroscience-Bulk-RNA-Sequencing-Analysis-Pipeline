@@ -1,0 +1,28 @@
+show_analysis_paths: False 
+
+fn_clean_exts:
+  - "_fastqc.zip"
+
+module_order:
+  - fastqc:
+      name: "FastQC (raw)"
+      info: "This section shows FastQC results before trimming."
+      path_filters:
+        - "raw/*_fastqc.zip"
+
+  - trimmomatic
+
+  - fastqc:
+      name: "FastQC (trimmed)"
+      info: "This section shows FastQC results after adapter trimming."
+      path_filters:
+        - "processed/*_trimmed_fastqc.zip"
+  
+  - salmon
+
+table_sample_merge:
+  "Raw": ".fastq.gz"
+  "Trimmed": "_trimmed.fastq.gz"
+
+software_versions:
+  Trimmomatic: "0.39"
