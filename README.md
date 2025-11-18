@@ -189,20 +189,20 @@ FASTQ files are copied into the linux directory by the scripts to speed up the o
 |`04_salmon_index.sh`|Builds an index from the gentrome and decoy files for Salmon quantification.|
 |`05_salmon_quant.sh`|Quantifies transcripts using Salmon with trimmed FASTQ files. The main output is a `quant.sf` file for each sample.|
 |`06_multiqc.sh`|Aggregates QC reports from FastQC, Salmon, and Trimmomatic into a single HTML file using MultiQC.|
-|`07_tximport.sh`|Imports quantified transcripts into R using *tximport*. |
-|`08_deseq2_multifactor.sh`|Performs differential gene expression analysis using a multifactor design formula (`~ genotype * treatment)` and saves results to Excel.|
-|`08_deseq2_singlefactor.sh`|Performs differential gene expression analysis using a single-factor design formula (`~ condition`) and saves results to Excel.|
-|`09_pca_plot.sh`|Generates a PCA plot using *DESeq2*.|
-|`10_heatmaps.sh`|Generates an unscaled heatmap, a Z-score scaled heatmap, and a sample-to-sample distance heatmap using *ComplexHeatmap*.|
-|`11_custom_heatmaps.sh`|Generates a heatmap listing a custom set of genes based on `custom_gene_list.txt` using *ComplexHeatmap*.|
-|`12_volcano_plot.sh`|Generates a volcano plot. Labels either show the top differentially expressed genes or the list of genes based on `custom_gene_list.txt` using *EnhancedVolcano*.|
-|`13_ma_plot.sh`|Generates an MA plot using *ggplot2*.|
-|`14_single_gene_plot.sh`|Generates a bar chart version of the plot created by the `plotCounts()` function from *DESeq2* by using *ggplot2*.|
-|`15_ora.sh`|Performs ORA analysis using *clusterProfiler* and saves results to Excel.|
-|`16_gsea.sh`|Performs GSEA analysis using *clusterProfiler* and saves results to Excel.|
-|`17_pathview_plot.sh`|Generates a pathview plot using *pathview*.|
-|`deseq2_utils.sh`|Provides utility functions for the *DESeq2* scripts.|
-|`plotting_utils.sh`|Provides utility functions for plotting.|
+|`07_tximport.R`|Imports quantified transcripts into R using *tximport*. |
+|`08_deseq2_multifactor.R`|Performs differential gene expression analysis using a multifactor design formula (`~ genotype * treatment)` and saves results to Excel.|
+|`08_deseq2_singlefactor.R`|Performs differential gene expression analysis using a single-factor design formula (`~ condition`) and saves results to Excel.|
+|`09_pca_plot.R`|Generates a PCA plot using *DESeq2*.|
+|`10_heatmaps.R`|Generates an unscaled heatmap, a Z-score scaled heatmap, and a sample-to-sample distance heatmap using *ComplexHeatmap*.|
+|`11_custom_heatmaps.R`|Generates a heatmap listing a custom set of genes based on `custom_gene_list.txt` using *ComplexHeatmap*.|
+|`12_volcano_plot.R`|Generates a volcano plot using *EnhancedVolcano*. Labels either show the top differentially expressed genes or the list of genes based on `custom_gene_list.txt`.|
+|`13_ma_plot.R`|Generates an MA plot using *ggplot2*.|
+|`14_single_gene_plot.R`|Generates a bar chart version of the plot created by the `plotCounts()` function from *DESeq2* by using *ggplot2*.|
+|`15_ora.R`|Performs ORA analysis using *clusterProfiler* and saves results to Excel.|
+|`16_gsea.R`|Performs GSEA analysis using *clusterProfiler* and saves results to Excel.|
+|`17_pathview_plot.R`|Generates a pathview plot using *pathview*.|
+|`deseq2_utils.R`|Provides utility functions for the *DESeq2* scripts.|
+|`plotting_utils.R`|Provides utility functions for plotting.|
 
 
 [^1]: Andrews S. Babraham Bioinformatics - FastQC A Quality Control tool for High Throughput Sequence Data [Internet]. 2010 [cited 2025 Oct 7]. Available from: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
